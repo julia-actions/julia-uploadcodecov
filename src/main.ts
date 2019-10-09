@@ -9,6 +9,7 @@ async function run() {
         // will generally not work if triggered by a PR, which is a common
         // situation.
         // core.setFailed(error.message)
+        core.debug(error.message)
     }
 }
 
