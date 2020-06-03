@@ -3,6 +3,7 @@ import * as exec from '@actions/exec'
 
 async function run() {
     try {
+        console.warn('THIS ACTION HAS BEEN DEPRECATED. PLEASE REFER TO THE README ON HOW TO UPDATE YOUR WORKFLOWS.')
         await exec.exec('julia', ['--color=yes', '-e', 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'])
     } catch (error) {
         // We are making errors non fatal for now because this for example
